@@ -710,11 +710,9 @@ export default function HairCareTracker() {
   };
 
   const deleteRoutine = (routineId) => {
-    if (confirm('Êtes-vous sûr de vouloir supprimer cette routine?')) {
-      setRoutines(routines.filter(r => r.id !== routineId));
-      setSwipedRoutineId(null);
-      alert('✅ Routine supprimée!');
-    }
+    setRoutines(routines.filter(r => r.id !== routineId));
+    setSwipedRoutineId(null);
+    alert('✅ Routine supprimée!');
   };
 
   // ===== FONCTIONS CALENDRIER =====
@@ -1760,9 +1758,8 @@ export default function HairCareTracker() {
                       </div>
                       <button
                         onClick={() => {
-                          if (confirm('Supprimer cette coupe?')) {
-                            setCoupes(coupes.filter(c => c.id !== coupe.id));
-                          }
+                          setCoupes(coupes.filter(c => c.id !== coupe.id));
+                          alert('✅ Coupe supprimée!');
                         }}
                         style={{ background: 'none', border: 'none', color: '#E74C3C', cursor: 'pointer', fontSize: '16px', padding: '4px' }}>
                         🗑️
