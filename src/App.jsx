@@ -489,8 +489,6 @@ export default function HairCareTracker() {
     ? routines.filter(r => r.programmeId === selectedProgram.id)
     : [];
   
-  const isProgrammeFinished = selectedProgram && routinesForCurrentProgram.length >= selectedProgram.semaines.length;
-
   const getRecapStats = () => {
     if (!selectedProgram) return null;
     const avg = routinesForCurrentProgram.length > 0
